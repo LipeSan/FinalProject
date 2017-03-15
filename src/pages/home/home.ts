@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+import { CadastrarPage } from '../cadastrar/cadastrar';
 
 /*
   Generated class for the Home page.
@@ -12,8 +14,27 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  slides = [
+    {
+      title: "Benvindo ao OrçaObra!",
+      description: "O <b>ObraOrça</b> é um aplicativo acadêmico",
+      image: "assets/img/design_001.png",
+    },
+    {
+      title: "O que é o ObraOrça?",
+      description: "<b>ObraOrça</b> é um aplicativo que tem como objetivos auxiliar os alunos do curso de Engenharia Civil ou pessoas do ramo para agilizar o processo de orçamento de obras!",
+      image: "assets/img/design_002.png",
+    },
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
+  openLoginPage(){
+    this.navCtrl.push(LoginPage);
+  }
+
+  openCadastrarPage(){
+    this.navCtrl.push(CadastrarPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');

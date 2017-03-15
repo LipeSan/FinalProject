@@ -8,7 +8,12 @@
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}" item-left></ion-icon>
         {{p.title}}
+      </button>
+      <button menuClose ion-item  (click)="exit()">
+        <ion-icon name="undo" item-left></ion-icon>
+        Sair
       </button>
     </ion-list>
   </ion-content>

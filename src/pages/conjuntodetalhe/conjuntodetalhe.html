@@ -1,0 +1,55 @@
+<!--
+  Generated template for the Conjuntodetalhe page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Conjunto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row responsive-sm>
+    <ion-img class="img_conjunto" src=".."></ion-img>
+  </ion-row>
+  <ion-card>
+    <ion-item> Código:
+      {{itemConjunto.codigo}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Nome:
+      {{itemConjunto.nome}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Desecrição:
+      {{itemConjunto.descricao}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Estado:
+      {{itemConjunto.estado}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Unidade:
+      {{itemConjunto.unidade}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Origem do Preço:
+      {{itemConjunto.origemPreco}}
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>Preço:
+      R${{itemConjunto.preco}}
+    </ion-item>
+  </ion-card>
+</ion-content>

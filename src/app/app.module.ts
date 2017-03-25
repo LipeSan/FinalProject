@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { HomeLogadaPage } from '../pages/homelogada/homelogada';
@@ -9,6 +10,10 @@ import { ObrasPage } from '../pages/obras/obras';
 import { ConjuntosPage } from '../pages/conjuntos/conjuntos';
 import { CadastrarPage } from '../pages/cadastrar/cadastrar';
 import { ConjuntodetalhePage } from '../pages/conjuntodetalhe/conjuntodetalhe';
+import { ObradetalhePage } from '../pages/obradetalhe/obradetalhe';
+
+import { ConnectionService } from '../providers/connection-service';
+import { Auth } from '../providers/auth';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,8 @@ import { ConjuntodetalhePage } from '../pages/conjuntodetalhe/conjuntodetalhe';
     ObrasPage,
     ConjuntosPage,
     CadastrarPage,
-    ConjuntodetalhePage
+    ConjuntodetalhePage,
+    ObradetalhePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,8 +41,9 @@ import { ConjuntodetalhePage } from '../pages/conjuntodetalhe/conjuntodetalhe';
     ObrasPage,
     ConjuntosPage,
     CadastrarPage,
-    ConjuntodetalhePage
+    ConjuntodetalhePage,
+    ObradetalhePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Auth]
 })
 export class AppModule {}

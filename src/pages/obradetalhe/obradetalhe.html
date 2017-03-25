@@ -7,12 +7,67 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>obradetalhe</ion-title>
+    <ion-title>Detalhe da Obra</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-title>
+    {{itemObra.name}}
+  </ion-title>
+  <ion-card>
+    <img src="{{itemObra.imagem}}"/>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label stacked>Nome</ion-label>
+        <ion-input type="text" name="nome" value="{{itemObra.name}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Total</ion-label>
+        <ion-input type="total" name="total" readonly="true" value="{{itemObra.total}}" ></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+  <ion-item *ngFor="let conjunto of itemObra.conjuntos; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+    <h2>
+      {{conjunto.nome}}
+      <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+    </h2>
+    <div *ngIf="isGroupShown(i)">
+      <ion-item>
+        <ion-label stacked>Descrição</ion-label>
+        <ion-textarea type="text" readonly="true" value="{{conjunto.descricao}}"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="isGroupShown(i)">
+      <ion-item>
+        <ion-label stacked>Origem Preço</ion-label>
+        <ion-textarea type="text" readonly="true" value="{{conjunto.origemPreco}}"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="isGroupShown(i)">
+      <ion-item>
+        <ion-label stacked>Preço</ion-label>
+        <ion-textarea type="text" readonly="true" value="{{conjunto.preco}}"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="isGroupShown(i)">
+      <ion-item>
+        <ion-label stacked>Quantidade</ion-label>
+        <ion-textarea type="text" value="{{conjunto.quantidade}}"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="isGroupShown(i)">
+      <ion-item>
+        <ion-label stacked>Unidade</ion-label>
+        <ion-textarea type="text" readonly="true" value="{{conjunto.unidade}}"></ion-textarea>
+      </ion-item>
+    </div>
+  </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController, LoadingController} from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-homelogada',
@@ -8,8 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class HomeLogadaPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public loadingCtrl: LoadingController) {
 
+  }
+
+  openHome(){
+    let modal = this.modalCtrl.create(HomeLogadaPage);
+    modal.present();
   }
 
 }

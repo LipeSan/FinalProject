@@ -16,13 +16,13 @@ import { CadastrarPage } from '../cadastrar/cadastrar';
 export class HomePage {
   slides = [
     {
-      title: "Benvindo ao OrçaObra!",
-      description: "O <b>ObraOrça</b> é um aplicativo acadêmico",
+      title: "Bem-vindos ao OrçaObra!",
+      description: "O <b>OrçaObra</b> é um aplicativo acadêmico",
       image: "assets/img/design_001.png",
     },
     {
-      title: "O que é o ObraOrça?",
-      description: "<b>ObraOrça</b> é um aplicativo que tem como objetivos auxiliar os alunos do curso de Engenharia Civil ou pessoas do ramo para agilizar o processo de orçamento de obras!",
+      title: "O que é o OrçaObra?",
+      description: "<b>OrçaObra</b> é um aplicativo que tem como objetivos auxiliar os alunos do curso de Engenharia Civil ou pessoas do ramo para agilizar o processo de orçamento de obras!",
       image: "assets/img/design_002.png",
     },
   ];

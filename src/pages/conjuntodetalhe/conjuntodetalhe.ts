@@ -15,7 +15,7 @@ export class ConjuntodetalhePage {
 itemConjunto: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.itemConjunto = navParams.get('item');
+    this.itemConjunto = this.navParams.get('item');
   }
 
   ionViewDidLoad() {

@@ -14,5 +14,23 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="this.user.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="this.user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" name="senha" [(ngModel)]="this.user.password"></ion-input>
+    </ion-item>
 
+  </ion-list>
+
+  <div padding>
+    <button ion-button primary block class="btn_cadastrar" (click)="register()">Cadastrar</button>
+  </div>
 </ion-content>

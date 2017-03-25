@@ -12,8 +12,23 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'obradetalhe.html'
 })
 export class ObradetalhePage {
+  itemObra: any;
+  shownGroup = null;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.itemObra = this.navParams.get('obra');
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  toggleGroup(group): void {
+    if (this.isGroupShown(group)) {
+        this.shownGroup = null;
+    } else {
+        this.shownGroup = group;
+    }
+};
+
+isGroupShown(group) : any {
+    return this.shownGroup === group;
+};
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ObradetalhePage');

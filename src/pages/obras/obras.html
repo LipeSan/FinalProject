@@ -8,5 +8,41 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-card *ngFor="let obra of obras">
+      <img src="{{obra.imagem}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{obra.name}}
+        </ion-card-title>
+        <p>
+          Total do financiamento: {{obra.total}}
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left small (click)="openObraDetalhePage(obra)" color="primary">
+            <ion-icon name="build"></ion-icon>
+            <div>Detalhe</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left small color="danger">
+            <ion-icon name="close"></ion-icon>
+            <div>Delete</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            {{obra.conjuntos.length}} Conjuntos
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+  <ion-fab left top>
+   <button ion-fab color="primary">
+     <ion-icon name="add"></ion-icon>
+   </button>
+ </ion-fab>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ConjuntodetalhePage } from '../conjuntodetalhe/conjuntodetalhe'
+import { ConjuntodetalhePage } from '../conjuntodetalhe/conjuntodetalhe';
 
 /*
   Generated class for the Conjuntos page.
@@ -27,7 +27,7 @@ export class ConjuntosPage {
       {codigo: 1, nome: 'Conjunto de portas', descricao: 'pacote de pregos 3mm com 1000 pregos', estado: 'RS', unidade: 'UN', origemPreco: 'AB', preco: 13.43},
       {codigo: 2, nome: 'Conjunto de Janelas', descricao: 'contempla 3 janelas de 1,5x2 metros de madeira pino', estado: 'RS', unidade: 'UN', origemPreco: 'AB', preco: 321.43},
       {codigo: 3, nome: 'Conjunto de piso porcelanato', descricao: 'Porcelanato de 60x60 mm', estado: 'RS', unidade: 'M²', origemPreco: 'AB', preco: 63.43},
-      {codigo: 3, nome: 'Conjunto de Laminado', descricao: 'Laminado na cor branca 60x20 mm', estado: 'RS', unidade: 'M²', origemPreco: 'AB', preco: 15.43}
+      {codigo: 4, nome: 'Conjunto de Laminado', descricao: 'Laminado na cor branca 60x20 mm', estado: 'RS', unidade: 'M²', origemPreco: 'AB', preco: 15.43}
     ];
   }
 
